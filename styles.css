@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: system-ui, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.banner-img {
+    height: 500px;
+    overflow: hidden; /* Optionnel : cache le reste de l'image si elle déborde *//* Centrer verticalement */
+}
+
+.banner-img img {
+    max-height: 100%; /* Limite la hauteur de l'image à celle du conteneur */
+    width: 100%; /* Ajuste la largeur pour garder les proportions */
+}
+
+.relativ2{
+    position: absolute;
+    top: 33%; /* distance du haut du parent */
+    left: 10%; /* distance de la gauche du parent */
+    width: 180px;
+    height: 180px;
+    transform: rotate(45deg);
+}
+.relativ1{
+    position: absolute;
+    top: 25%; /* distance du haut du parent */
+    left: 80%; /* distance de la gauche du parent */
+    width: 180px;
+    height: 180px;
+    transform: rotate(120deg);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+header {
+    background: rgb(3,70,3);
+    background: linear-gradient(90deg, rgba(3,70,3,1) 0%, rgba(69,217,78,1) 48%, rgba(20,183,96,1) 100%);
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style de base du bouton */
+.btn-vert {
+    background-color: #28a745; /* Vert */
+    color: #fff; /* Texte blanc */
+    padding: 10px 20px; /* Espace interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition pour les effets */
+}
+
+/* Effet au survol */
+.btn-vert:hover {
+    background-color: #218838; /* Vert plus foncé */
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+/* Effet quand on clique */
+.btn-vert:active {
+    background-color: #1e7e34; /* Vert encore plus foncé */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduit l'ombre */
+    transform: translateY(1px); /* Légère descente */
+}
+
+.btn-white {
+    background-color: #e0e6e1; /* Vert */
+    color: #15ab3b; /* Texte blanc */
+    padding: 10px 20px; /* Espace interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition pour les effets */
+}
+
+/* Effet au survol */
+.btn-white:hover {
+    background-color: #ced2cf; /* Vert plus foncé */
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+/* Effet quand on clique */
+.btn-white:active {
+    background-color: #aeaeae; /* Vert encore plus foncé */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduit l'ombre */
+    transform: translateY(1px); /* Légère descente */
+}
+
+
+.hero {
+    text-align: center;
+    padding: 3rem;
+    background-color: #e0f7fa;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: auto;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.logo { 
+    width: 105px; 
+    height: 70px; 
+    margin: 10px;
+}
+
+.logo-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta {
+    padding: 0.75rem 2rem;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+    background-color: #fff;
+}
+
+.feature {
+    text-align: center;
+    max-width: 250px;
+}
+
+.stats {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #e0f7fa;
+}
+
+.stat {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter {
+    background-color: #42bd54;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.newsletter h2 {
+    margin-bottom: 1rem;
+}
+
+/* fade in effect scroll paragraph */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.counter {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box-line {
+    display: flex;
+    height: auto;
+}
+
+.box-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-text {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    height: auto;
+}
+
+h3{
+    margin: 4px;
+}
+
+#summary {
+    height: auto;
+    margin-top: auto;
+}
+
+.icon {
+    font-size: 50px;
+    margin: 20px;
+    color: #333;
+}
+
+.icon{
+    font-size: 450%
+}
+
+.banner {
+    display: flex;
+    justify-content: center; /* Centrer les images horizontalement */
+    align-items: center; /* Centrer les images verticalement */
+    overflow: hidden; /* Masquer le débordement si les images sont trop grandes */
+}
+
+.banner img {
+    max-width: 33.33%; /* Ajuster la largeur pour que les trois images tiennent sur une ligne */
+    height: auto; /* Maintenir le ratio d'aspect */
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .box-container {
+        visibility: hidden;
+        display: none;
+    }
+
+    .relativ2{
+        visibility: hidden;
+        display: none;
+    }
+
+    .relativ1{
+        visibility: hidden;
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    .box-container {
+        visibility: hidden;
+        display: none;
+    }
+
+    .logo{
+        display: none;
+        visibility: hidden;
+    }
+    .logo-contain{
+        display: none;
+        visibility: hidden;
+    }
+
+    .relativ2{
+        visibility: hidden;
+        display: none;
+    }
+
+    .relativ1{
+        visibility: hidden;
+        display: none;
+    }
+}
