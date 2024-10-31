@@ -15,22 +15,6 @@ body {
     font-size: 2rem;
 }
 
-.relativ2{
-    position: absolute;
-    top: 33%; /* distance du haut du parent */
-    left: 10%; /* distance de la gauche du parent */
-    width: 180px;
-    height: 180px;
-    transform: rotate(45deg);
-}
-.relativ1{
-    position: absolute;
-    top: 25%; /* distance du haut du parent */
-    left: 80%; /* distance de la gauche du parent */
-    width: 180px;
-    height: 180px;
-    transform: rotate(120deg);
-}
 .container {
     display: flex;
     justify-content: space-between;
@@ -84,6 +68,32 @@ header {
     transform: translateY(1px); /* Légère descente */
 }
 
+.btn-black {
+    background-color: #363736; /* Vert */
+    color: #fff; /* Texte blanc */
+    padding: 10px 20px; /* Espace interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition pour les effets */
+}
+
+/* Effet au survol */
+.btn-black:hover {
+    background-color: #1b1b1b; /* Vert plus foncé */
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+/* Effet quand on clique */
+.btn-black:active {
+    background-color: #000000; /* Vert encore plus foncé */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduit l'ombre */
+    transform: translateY(1px); /* Légère descente */
+}
+
 .btn-white {
     background-color: #e0e6e1; /* Vert */
     color: #15ab3b; /* Texte blanc */
@@ -112,8 +122,8 @@ header {
 
 .btn-bottom {
     font-size: 2rem;
+    margin-left: 2.5%;
 }
-
 
 .hero {
     text-align: center;
@@ -306,6 +316,23 @@ h3{
         margin: 0;
         padding: 0;
     }
+
+    .container{
+        justify-content: center;
+    }
+    .btn-phone{
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .banner-img{
+        background-position: center;
+        overflow: hidden;
+    }
+
     .box-container {
         visibility: hidden;
         display: none;
@@ -331,7 +358,7 @@ h3{
     }
 
     .box{
-        text-align: center
+        text-align: center;
     }
 
     .box-container-img{
@@ -341,6 +368,18 @@ h3{
 
     .box-container-text{
         max-width: 100%;
+        margin: 0;
+        padding:0;
     }
     
+    .btn-phone-top{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .btn-phone{
+        height: auto;
+    }
 }
